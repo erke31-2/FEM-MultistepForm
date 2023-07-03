@@ -42,7 +42,7 @@ const FinishingUp = () => {
             </span>
           </li>
           {selectedAddOns.map((addOn) => (
-            <li className="flex justify-between">
+            <li className="flex justify-between" key={addOn.title}>
               <h2>{addOn.title}</h2>
               <span className="font-[500] text-marineBlue">
                 {isMonthly ? `+$${addOn.billing.monthly}/mo` : `+$${addOn.billing.yearly}/yr`}
