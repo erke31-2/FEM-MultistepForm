@@ -4,10 +4,10 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "mobileBg": "url('./src/assets/images/bg-sidebar-mobile.svg')",
-        "desktopBg": "url('./src/assets/images/bg-sidebar-desktop.svg')",
-        "checkMark": "url('./src/assets/images/icon-checkmark.svg')",
-        "thankYou": "url('./src/assets/images/icon-thank-you.svg')"
+        "mobileBg": "url('/src/assets/images/bg-sidebar-mobile.svg')",
+        "desktopBg": "url('/src/assets/images/bg-sidebar-desktop.svg')",
+        "checkMark": "url('/src/assets/images/icon-checkmark.svg')",
+        "thankYou": "url('/src/assets/images/icon-thank-you.svg')"
       },
       colors: {
         "marineBlue": "hsl(213, 96%, 18%)",
