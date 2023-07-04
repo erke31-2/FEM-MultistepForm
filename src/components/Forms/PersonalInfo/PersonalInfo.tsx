@@ -10,10 +10,11 @@ import { zodResolver } from "@hookform/resolvers/zod";
 const PersonalInfo = () => {
   const setCurrentStep = useFormStore((state) => state.setCurrentStep);
   const {name, email, phone, setPersonalFields} = useFormStore((state) => state.personalInfo)
+  const phoneRegex = new RegExp(/^\+[1-9]\d{1,14}$/);
   const schema: ZodType<PersonalInfoFormFields> = z.object({
     name: z.string().nonempty("Name is required"),
-    email: z.string().nonempty("Email is required").email(),
-    phone: z.string().nonempty("Ph.No is required"),
+    email: z.string().nonempty("Email is required").email("Invalid Email Address"),
+    phone: z.string().nonempty("Ph.No is required").regex(phoneRegex, "Invalid Ph.No")
   });
 
   const {
